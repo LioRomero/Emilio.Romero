@@ -1,0 +1,179 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Titulos;
+  src: url(../Tipografias/Great\ Fighter\ Demo.otf);
+}
+
+@font-face {
+  font-family: Subtitulos;
+  src: url(../Tipografias/Minimalist.otf);
+}
+
+/* Estilos generales */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #383838;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado y menú de navegación */
+
+.header {
+  background-color: #d90429;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-family: Titulos;
+  font-size: 36px;
+}
+
+.nav a:hover {
+  border-bottom: 4px solid white;
+}
+
+/* Sección de inicio */
+
+#inicio {
+  background-image: url(../images/Fondo.png);
+  background-size: cover;
+  overflow: hidden;
+  padding: 100px 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: Titulos;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: Subtitulos;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/* Sección de proyectos */
+
+#Proyectos {
+  background-color: #383838;
+  padding: 100px 0;
+}
+
+.Contenido {
+  display: flex;
+  justify-content: space-around;
+}
+
+#SPersona,
+#SProyectos,
+#SConocimientos,
+#SContacto {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* Ajustes de las secciones individuales */
+
+#SPersona h2,
+#SProyectos h2,
+#SConocimientos h2,
+#SContacto h2 {
+  font-family: Titulos;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#SPersona p,
+#SProyectos p,
+#SConocimientos p,
+#SContacto p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+/* Ajustes de las imágenes y botones */
+
+#Sprays button,
+#VerMasP,
+#VerMasPr {
+  background-color: #2b2d42;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+#Sprays button img {
+  width: 100%;
+  max-height: 100%;
+  transition: 0.2s;
+}
+
+#Sprays button:hover img {
+  height: 120%;
+  transition: 0.2s;
+}
+
+/* Ajustes de la sección de proyectos individuales */
+
+#pop1:hover,
+#pop2:hover,
+#pop3:hover {
+  cursor: pointer;
+}
+
+/* Otros ajustes */
+
+#Regresar,
+#Regresar2 {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+  background-color: darkgrey;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+}
+
+#Regresar:hover,
+#Regresar2:hover {
+  cursor: pointer;
+}

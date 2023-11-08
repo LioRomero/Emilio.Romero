@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="Css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="inicio">
+    <header></header>
+    <main>
+      <section class="Contenido">
+        <section id="SPersona">
+          <svg
+            viewBox="0 0 2017 930"
+            fill="f0d13d"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1801.98 306.411C1852.47 220.314 776.862 111.485 218.117 71.1168C142.303 134.733 176.248 166.809 202.698 174.895L315.57 210.382C234.789 253.289 261.142 322.928 284.417 352.384C-6.31711 346.631 1.68868 478.852 69.4533 479.559C137.218 480.267 408.328 567.339 387.293 573.574C366.257 579.808 117.141 564.639 81.7327 599.936C53.4062 628.174 84.1627 651.254 103.082 659.264C48.8527 601.291 1661.96 859.649 1749.86 860.227C1820.17 860.69 1826.16 769.649 1820.36 724.07C1949.99 765.167 1962.45 579.829 1977.73 544.662C1989.95 516.528 1883.81 466.233 1829.2 444.603C1855.31 363.623 1821.93 318.733 1801.98 306.411Z"
+              fill="#2B2D42"
+              stroke="white"
+              stroke-width="5"
+            />
+            <path
+              d="M1781.79 300.99C1830.36 219.168 791.617 113.333 252.057 73.7373C178.992 134.113 211.835 164.708 237.389 172.459L346.443 206.466C268.539 247.126 294.131 313.449 316.665 341.528C35.946 335.439 43.9553 461.276 109.384 462.093C174.813 462.909 436.758 546.34 416.461 552.228C396.163 558.116 155.607 543.154 121.495 576.668C94.205 603.479 123.95 625.506 142.233 633.169C89.7517 577.888 1647.78 827.15 1732.64 827.886C1800.53 828.475 1806.12 741.854 1800.42 698.47C1925.67 737.851 1937.31 561.512 1951.98 528.079C1963.73 501.333 1861.13 453.249 1808.37 432.55C1833.41 355.545 1801.08 312.758 1781.79 300.99Z"
+              fill="#EF233C"
+              stroke="white"
+              stroke-width="5"
+            />
+          </svg>
+          <p style="font-size: 24px">
+            "Me apasiona la creación de historias que tienen el poder de cambiar
+            el mundo. Soy estudiante de último semestre en la Universidad Jorge
+            Tadeo Lozano con un enfoque en el diseño interactivo y la
+            experiencia del usuario (UX/UI) en el contexto de la transformación
+            digital. "
+          </p>
+          <h2>Quien Soy</h2>
+          <a href="Perfil.html"
+            ><button id="VerMasP">
+              <h4>Ver mas</h4>
+            </button>
+          </a>
+        </section>
+
+        <section id="SProyectos">
+          <img src="./images/Fondo texto conocimientos.png" alt="" />
+          <img id="Clasificado" src="./images/Clasificado.png" alt="" />
+          <h2>proyectos</h2>
+          <p>
+            Aqui se encuentran los <b>proyectos</b> mas importantes
+            desarrollados durante mi carrera y fuera de mis estudios
+          </p>
+          <a href="Proyectos.html"
+            ><button id="VerMasPr">
+              <h4>Ver mas</h4>
+            </button>
+          </a>
+        </section>
+
+        <section id="SConocimientos">
+          <img src="./images/Fondo texto.png" alt="" />
+
+          <div class="slider-container">
+            <div class="slider">
+              <div class="slide" style="background-color: #ff5733">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                vitae ducimus, ea molestiae quas amet ratione perferendis soluta
+                dolore ex facere non minus? Consectetur ipsam suscipit est
+                delectus magni placeat.
+              </div>
+              <div class="slide" style="background-color: #33ff57"></div>
+              <div class="slide" style="background-color: #5733ff"></div>
+            </div>
+          </div>
+
+          <button id="prevBtn" onclick="prevSlide()">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button id="nextBtn" onclick="nextSlide()">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <p>
+            Aqui estan los <b>Conocimientos</b> que se han adquirido con el
+            pasar de los años
+          </p>
+          <h2>Conocimientos</h2>
+        </section>
+
+        <section id="SContacto">
+          <h2>Contacto</h2>
+          <h3>
+            Para contactarme puedes escribirme a mi correo
+            emilio.romerog@outlook.com o buscarme en linkedin como Emilio Romero
+          </h3>
+        </section>
+      </section>
+    </main>
+    <nav>
+      <div id="Sprays">
+        <button id="BPersona">
+          <img src="images/Spray4.png" alt="" srcset="" />
+        </button>
+        <button id="BProyectos">
+          <img src="images/Spray1.png" alt="" srcset="" />
+        </button>
+        <button id="BConocimiento">
+          <img src="images/Spray2.png" alt="" srcset="" />
+        </button>
+        <button id="BContacto">
+          <img src="images/Spray3.png" alt="" srcset="" />
+        </button>
+      </div>
+    </nav>
+    <script src="./JS/Main.js"></script>
+    <!-- Esto abre la carpeta de Java script-->
+    <script
+      src="https://kit.fontawesome.com/1da28430f0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

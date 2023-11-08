@@ -1,0 +1,909 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Titulos;
+  src: url(../Tipografias/Great\ Fighter\ Demo.otf);
+}
+@font-face {
+  font-family: Subtitulos;
+  src: url(../Tipografias/Minimalist.otf);
+}
+#Proyectos {
+  background-image: none;
+  background-color: #383838;
+}
+#inicio {
+  background-image: url(../images/Fondo.png);
+  background-size: 50%;
+  overflow: hidden; /* esto lo que hace es ocultar el scroll de contenido y lo que impide que se haga un scroll al body*/
+}
+h1 {
+  font-family: Titulos;
+  color: white;
+  font-size: 62px;
+}
+
+h2 {
+  font-family: Subtitulos;
+  color: white;
+  text-align: center;
+  font-size: 48px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: blackkl;
+  text-align: center;
+  font-size: 36px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-size: 24px;
+}
+svg {
+  width: 1500px;
+  margin-top: 200px;
+  left: 150px;
+  position: relative;
+}
+
+.Contenido {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+}
+#SPersona,
+#SProyectos,
+#SConocimientos,
+#SContacto {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#SPersona h2 {
+  left: 500px;
+  top: 400px;
+  position: absolute;
+  transform: rotateZ(9deg);
+  font-family: Titulos;
+}
+#SPersona p {
+  right: 15%;
+  margin-top: 200px;
+  position: absolute;
+  transform: rotateZ(8deg);
+}
+
+#VerMasP {
+  width: 200px;
+  height: 6vh;
+  background-color: #2b2d42;
+  text-align: center;
+  right: 150px;
+  top: 750px;
+  position: absolute;
+  transform: rotateZ(8deg);
+  color: white;
+}
+
+#SProyectos {
+  top: 100px;
+  left: 200px;
+}
+
+#SProyectos h2 {
+  left: 350px;
+  top: 250px;
+  position: absolute;
+  font-family: Titulos;
+}
+
+#SProyectos p {
+  top: 35%;
+  left: 150px;
+  font-size: 24px;
+}
+
+#Clasificado {
+  width: 600px;
+  left: 150px;
+  top: 450px;
+  position: absolute;
+}
+
+#VerMasPr {
+  width: 180px;
+  height: 6vh;
+  background-color: #2b2d42;
+  text-align: center;
+  left: 700px;
+  bottom: 300px;
+  position: absolute;
+  color: white;
+}
+
+#SConocimientos img {
+  width: 1200px;
+  margin-top: 15%;
+  margin-left: 50%;
+}
+
+#SConocimientos h2 {
+  left: 480px;
+  top: 250px;
+  position: absolute;
+  aspect-ratio: 1/1;
+  transform: rotateZ(-12deg);
+  font-family: Titulos;
+}
+
+#SConocimientos p {
+  left: 680px;
+  top: 330px;
+}
+
+.slider-container {
+  width: 500px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateX(50%);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.slide {
+  width: 500px;
+  height: 300px;
+  flex-shrink: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#prevBtn,
+#nextBtn {
+  cursor: pointer;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: calc(50% + 125px);
+  height: 50px;
+}
+#nextBtn {
+  left: 103%;
+}
+#prevBtn {
+  left: 58.5%;
+}
+
+#SContacto {
+  width: 100%;
+  position: relative;
+}
+#SContacto h2 {
+  font-family: Titulos;
+  position: absolute;
+  font-size: 62px;
+  top: 300px;
+  left: 600px;
+  width: 200px;
+  height: 100px;
+  color: black;
+}
+#SContacto h3 {
+  width: 600px;
+  position: absolute;
+  color: black;
+}
+#Sprays {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+#Sprays button {
+  width: 500px;
+  aspect-ratio: 1/1;
+  /* esto lo que hace es hacer responsive   */
+  text-align: center;
+  position: relative;
+  color: transparent;
+  border: 0%;
+  max-width: 8%;
+  aspect-ratio: 1/1;
+  border-color: white;
+  background-color: #383838;
+}
+
+#Sprays button img {
+  position: absolute;
+  /* Al usar la position absolute,el objeto empieza a flotar y sobreponerse sobre el padre pero saliendose de su cubo */
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  /* Esto se utiliza para centrar la imagen dentro del padre */
+  height: 200px;
+  transition: 0.2s;
+  background-size: cover;
+}
+
+#Sprays button:hover img {
+  height: 250px;
+  transition: 0.2s;
+}
+
+.Menu {
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: #d90429;
+  z-index: 15;
+}
+header {
+  width: 100%;
+  height: 70px;
+}
+.Navegacion {
+  width: 100px;
+  height: 30px;
+  float: left;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-left: 5%;
+  display: flex;
+  align-items: last baseline;
+  background: none;
+  border: none;
+  font-size: 36px;
+  font-family: Titulos;
+}
+.Navegacion:hover {
+  color: white;
+  cursor: pointer;
+  border-bottom: 4px solid white;
+}
+#PContendio {
+  padding-top: 150px;
+  width: 100%;
+  height: 1000px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#TituloInicial {
+  width: 100%;
+  padding-left: 43%;
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+#PCButtons {
+  width: 2000px;
+  height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+#UButton:hover {
+  cursor: pointer;
+}
+#UButton {
+  width: 400px;
+  height: 100px;
+  float: left;
+  background-color: #d90429;
+  border-radius: 20px 20px 0px 0px;
+}
+
+#UButton h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#Ubutton.active {
+  margin-top: 20px;
+  width: 200px;
+  height: 80px;
+  padding-bottom: 20px;
+  float: left;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #383838;
+}
+#Ubutton.inactive h2 {
+  font-size: 22px;
+  color: gray;
+}
+#GButton {
+  margin-top: 20px;
+  width: 200px;
+  height: 80px;
+  padding-bottom: 20px;
+  float: left;
+  border-radius: 20px 20px 0px 0px;
+  background-color: #383838;
+}
+
+#GButton h2 {
+  font-size: 22px;
+  color: gray;
+}
+
+#Gbutton.active {
+  width: 400px;
+  height: 100px;
+  background-color: #d90429;
+}
+#GButton.active h2 {
+  font-size: 42px;
+  color: gray;
+}
+#GButton:hover {
+  cursor: pointer;
+}
+#GameDesign {
+  display: none;
+  width: 100%;
+}
+#proyectoU {
+  width: 100%;
+}
+.btnsUX {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #2b2d42;
+  border-color: white;
+  border-width: 5px;
+}
+.btnsUX h2 {
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  height: 100px;
+  margin-block: 50px;
+  color: white;
+}
+#pop1:hover {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(147, 17, 193, 1) 0%,
+    rgba(59, 196, 244, 1) 100%
+  );
+  transition: ease-in-out;
+  cursor: pointer;
+}
+#pop2:hover {
+  background: rgb(147, 58, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(147, 58, 58, 1) 0%,
+    rgba(248, 248, 248, 1) 67%,
+    rgba(222, 200, 0, 1) 100%
+  );
+  transition: ease-in-out;
+  cursor: pointer;
+}
+#pop2:hover h2 {
+  color: black;
+}
+#pop3:hover {
+  background: rgb(255, 64, 172);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 64, 172, 1) 0%,
+    rgba(59, 196, 244, 1) 67%,
+    rgba(18, 70, 253, 1) 92%
+  );
+  transition: ease-in-out;
+  cursor: pointer;
+}
+#proyectoG {
+  width: 100%;
+}
+
+.btnsGD {
+  width: 100%;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #2b2d42;
+  border-color: white;
+  border-width: 5px;
+}
+.btnsGD h2 {
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  height: 100px;
+  margin-block: 50px;
+  color: white;
+}
+#Job4Me {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+  background-color: white;
+  width: 1200px;
+  max-width: 80%;
+  height: 800px;
+  max-height: 85%;
+}
+#Job4Me.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+#OtraCiudad {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+  background-color: white;
+  width: 1200px;
+  max-width: 80%;
+  height: 800px;
+  max-height: 85%;
+}
+#OtraCiudad.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#Cibernexo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+  background-color: white;
+  width: 1200px;
+  max-width: 80%;
+  height: 800px;
+  max-height: 85%;
+}
+#Cibernexo.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  animation: infiniteSlide 10s linear infinite;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  width: 100px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  background: #eee; /* Color de fondo personalizado */
+}
+
+.carousel-slide img {
+  width: 100%;
+  max-height: 100%;
+}
+
+@keyframes infiniteSlide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+.Titulo h2 {
+  align-items: center;
+  font-family: Titulos;
+}
+.AcercaDe {
+  width: 100%;
+  height: 160px;
+}
+.AcercaDe p {
+  width: 80%;
+  margin-top: 2%;
+  margin-right: 10%;
+  margin-left: 10%;
+  align-self: center;
+  justify-content: center;
+  text-align: justify;
+  color: black;
+}
+#Regresar {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  z-index: 3;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: darkgrey;
+}
+#Regresar:hover {
+  cursor: pointer;
+}
+#Regresar2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  z-index: 3;
+  left: 10px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+#Regresar2:hover {
+  cursor: pointer;
+}
+#VerMas {
+  width: 15%;
+  height: 6vh;
+  background-color: #2b2d42;
+  text-align: center;
+  color: white;
+}
+#VerMas:hover {
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  /* Cuando el overlay esta oculto, no se podra interactuar con el  */
+}
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#PJob {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(147, 17, 193, 1) 0%,
+    rgba(59, 196, 244, 1) 100%
+  );
+}
+#Job {
+  background-color: white;
+}
+#Job .Navegacion:hover {
+  color: black;
+  cursor: pointer;
+  border-bottom: 4px solid black;
+}
+
+#TituloPrincipal {
+  padding-top: 100px;
+  width: 100%;
+  height: 200px;
+}
+.ContenidoProyecto {
+  width: 100%;
+}
+#TituloPrincipal h1 {
+  color: white;
+  margin-left: 900px;
+  font-size: 80;
+}
+.InformacionProyecto {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  padding-top: 50px;
+}
+#Propuesta {
+  padding-left: 200px;
+}
+
+.SubTitulo {
+  width: 200px;
+  height: 100px;
+  max-width: 50%;
+  padding-left: 50px;
+}
+.SubTitulo h3 {
+  color: white;
+}
+#imagenes {
+  position: absolute;
+  right: 10%;
+}
+#TextoP {
+  padding-left: 200px;
+}
+.Texto {
+  width: 200px;
+  height: 200px;
+  max-width: 50%;
+  padding-left: 100px;
+}
+.Texto p {
+  color: white;
+  font-size: 18px;
+  text-align: justify;
+}
+#Desarrollo {
+  width: 100%;
+}
+#Prototipo {
+  width: 800px;
+}
+
+.imagenesPrototipo {
+  width: 100%;
+  height: 1000px;
+
+  position: relative;
+}
+.imagen1 {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: white;
+}
+.imagen2 {
+  position: absolute;
+  top: 100px;
+  left: 530px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: white;
+}
+.imagen3 {
+  position: absolute;
+  bottom: 100px;
+  right: 540px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: white;
+}
+.imagen4 {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: white;
+}
+.imagen5 {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagen6 {
+  position: absolute;
+  bottom: 100px;
+  left: 530px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagen7 {
+  position: absolute;
+  top: 100px;
+  right: 540px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagen8 {
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+#TextoPB {
+  width: 100%;
+  height: 200px;
+  max-width: 100%;
+  color: white;
+  font-size: 26px;
+  text-align: justify;
+}
+.imagenM1 {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: #3bc4f4;
+  z-index: 5;
+}
+.imagenM2 {
+  position: absolute;
+  top: 100px;
+  left: 530px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: #3bc4f4;
+  z-index: 5;
+}
+.imagenM3 {
+  position: absolute;
+  bottom: 100px;
+  right: 540px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: #3bc4f4;
+  z-index: 5;
+}
+.imagenM4 {
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: #3bc4f4;
+  z-index: 5;
+}
+
+.imagenM5 {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagenM6 {
+  position: absolute;
+  bottom: 100px;
+  left: 530px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagenM7 {
+  position: absolute;
+  top: 100px;
+  right: 540px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
+.imagenM8 {
+  position: absolute;
+  bottom: 100px;
+  right: 40px;
+  width: 500px;
+  height: 400px;
+  max-width: 40%;
+  max-height: 80%;
+
+  border: #2b2d42;
+  border-style: groove;
+  border-width: 20px;
+  background-color: rgba(147, 17, 193, 1);
+}
